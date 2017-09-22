@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dsbenchmarkcyy-aggregator.iml" filepath="$PROJECT_DIR$/dsbenchmarkcyy-aggregator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api/dsbenchmarkcyy-api.iml" filepath="$PROJECT_DIR$/api/dsbenchmarkcyy-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/artifacts/dsbenchmarkcyy-artifacts.iml" filepath="$PROJECT_DIR$/artifacts/dsbenchmarkcyy-artifacts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cli/dsbenchmarkcyy-cli.iml" filepath="$PROJECT_DIR$/cli/dsbenchmarkcyy-cli.iml" />
+      <module fileurl="file://$PROJECT_DIR$/features/dsbenchmarkcyy-features.iml" filepath="$PROJECT_DIR$/features/dsbenchmarkcyy-features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/impl/dsbenchmarkcyy-impl.iml" filepath="$PROJECT_DIR$/impl/dsbenchmarkcyy-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/it/dsbenchmarkcyy-it.iml" filepath="$PROJECT_DIR$/it/dsbenchmarkcyy-it.iml" />
+      <module fileurl="file://$PROJECT_DIR$/karaf/dsbenchmarkcyy-karaf.iml" filepath="$PROJECT_DIR$/karaf/dsbenchmarkcyy-karaf.iml" />
+    </modules>
+  </component>
+</project>
