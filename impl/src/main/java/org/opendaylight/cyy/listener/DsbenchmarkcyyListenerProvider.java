@@ -23,14 +23,14 @@ public class DsbenchmarkcyyListenerProvider {
 
     public void setDataBroker(final DataBroker dataBroker){
         this.dataBroker = dataBroker;
-        LOG.debug("DsbenchmarkcyyListenerProvider created");
+        LOG.info("DsbenchmarkcyyListenerProvider created");
     }
 
     public void createAndRegisterListeners(int numListeners){
         for (int i=0;i<numListeners;i++){
             DsbenchmarkcyyListener dsbenchmarkcyyListener = new DsbenchmarkcyyListener();
-            dataBroker.registerDataTreeChangeListener(new DataTreeIdentifier<>(LogicalDatastoreType.CONFIGURATION,TEST_EXEC_IID),dsbenchmarkcyyListener);
-            dataBroker.registerDataTreeChangeListener(new DataTreeIdentifier<>(LogicalDatastoreType.OPERATIONAL,TEST_EXEC_IID),dsbenchmarkcyyListener);
+            listeners.add(dataBroker.registerDataTreeChangeListener(new DataTreeIdentifier<>(LogicalDatastoreType.CONFIGURATION,TEST_EXEC_IID),dsbenchmarkcyyListener));
+            listeners.add(dataBroker.registerDataTreeChangeListener(new DataTreeIdentifier<>(LogicalDatastoreType.OPERATIONAL,TEST_EXEC_IID),dsbenchmarkcyyListener));
         }
 
         LOG.info("cyy createAndRegisterListeners");
@@ -42,7 +42,7 @@ public class DsbenchmarkcyyListenerProvider {
         for (ListenerRegistration<DsbenchmarkcyyListener> listenerRegistration : listeners){
             dataChanges += listenerRegistration.getInstance().getNumDataChanges();
         }
-        LOG.debug("DsbenchmarkcyyLisenerProvider , total data changes {}", dataChanges);
+        LOG.info("DsbenchmarkcyyLisenerProvider , total data changes {}", dataChanges);
         return dataChanges;
     }
 
@@ -54,7 +54,7 @@ public class DsbenchmarkcyyListenerProvider {
             listenerRegistration.close();
         }
         listeners.clear();
-        LOG.debug("DsbenchmarkListenerProvider destroyed listeners, total events {}",totalEvents);
+        LOG.info("DsbenchmarkListenerProvider destroyed listeners, total events {}",totalEvents);
         return totalEvents;
     }
 }

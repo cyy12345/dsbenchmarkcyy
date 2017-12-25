@@ -41,10 +41,10 @@ public class DsbenchmarkcyyListener implements DataTreeChangeListener<TestExec>{
             final Collection<DataObjectModification<? extends DataObject>> modifications =
                     rootNode.getModifiedChildren();
 
-            LOG.debug("cyychangeId {}, modType {}, mods: {}", changeId, modType, modifications.size());
+            LOG.info("cyychangeId {}, modType {}, mods: {}", changeId, modType, modifications.size());
 
             for (DataObjectModification<? extends DataObject> mod : modifications){
-                LOG.debug("cyymod-getDataAfter: {}",mod.getDataAfter());
+                LOG.info("cyymod-getDataAfter: {}",mod.getDataAfter());
             }
 
         }
